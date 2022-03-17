@@ -1,0 +1,358 @@
+<html>
+	<head>
+		<title>Inicio - AP-Biotech</title>
+		<link rel="shortcut icon" href="source\banners\image001.jpg" />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--Boostrap CSS-->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+			integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+			crossorigin="anonymous"
+		/>
+		<!--Custom CSS-->
+		<link rel="stylesheet" href="stylesap.css" />
+		<!--Font Awesome CSS-->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css"
+		/>
+
+		<!--JQuery-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	</head>
+
+	<body>
+		<!--logo-->
+		<div class="header">
+			<!-- Logo --->
+			<img
+				class="d-inline-block mb-2 img-resposive"
+				id="logo"
+				src="source/banners/image001.jpg"
+				alt="apbiotech"
+			/>
+			<div class="w-50 d-inline-block m-3" id="buscador">
+				<form class="form-inline">
+					<input
+						class="form-control w-75 d-inline-block"
+						type="search"
+						placeholder="Buscar Productos..."
+						aria-label="Search"
+					/>
+					<button class="btn btnbuscar" type="submit">Buscar</button>
+				</form>
+			</div>
+			<!-- Buscador --->
+
+			<div class="d-inline-block" id="carrito">
+				<ul>
+					<li id="argentina">
+						<span class="m-2">
+							<img
+								src="data:image/jpeg;base64,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"
+								alt=""
+								height="50px"
+								width="50px"
+							/>
+							<img
+								src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxETExEQERQQFxAREBARERERFxIREBEWFhIXGxYZFxgZHioiGR4nHBgWIzMjJystMDAwGCI2OzYvOiovMC0BCwsLDw4PGxERGy8nISEvMC86LTAxLy8tLzoxLy84MjItLS86Ly8tODAyLy8vLy8vLS04LS0vLy80Ly8vLy8tMv/AABEIAMIBAwMBIgACEQEDEQH/xAAcAAEAAQUBAQAAAAAAAAAAAAAABQIDBAYHAQj/xABLEAABAwIBBQsIBwUGBwAAAAABAAIDBBESBSExQZIGE1FTVGFxgZPR0gcWFyIyUpHTFSNCQ2OhsTNygqLBFCREYnOyZKOzwuHw8f/EABoBAQADAQEBAAAAAAAAAAAAAAACAwQBBQb/xAAyEQACAQICCAQGAgMBAAAAAAAAAQIDEQRREhQVITFSkaETQWHRBUKBscHwMnEi4fEj/9oADAMBAAIRAxEAPwDuKIiAIiIAiIgCIiAIiIAi8JVqScBAXlSXBRM+WGAlrSXPGlkYL3Dpt7PXZWxNUv8AZjawcMrvW2WXB2ggJkyhU7+FEigqD7UwH+mwN/3ly9GSXa55z2Y/RoQErv4XomCijkjgmn+LT+oXn0ZKPZnk/jbER/K0H80BMB4VSg97qm8S/oxxH/uv+SNyuW/tWSR87hdnW5pIHXZATiLEp6xrgCCCDoIIIPQVktcCgKkREAREQBERAEREAREQBERAEREAREQBERAEREAVuSUBW6ioDQSSM2knQFDGSSc+qXNhP2xmkl/c91v+bSdVsxQGRV5U9YxxgvkGlrcwZwY3aG/rwAq2zJr5M8zyRxbLsj6/tP68x4Fn0dG1gDWgADUNHOec86yg1AWKelYwBrGta0aAAAB0AK+Gqqy9sgKcKWXrtB6FoQ3TVPvjZZ3KynSlO9vIjKajxN8smFaH5zVPvjZZ3J5zVPvjZZ3KzVp+hDxYm94VS5l1o3nNU++NlncnnNU++NlncmrT9B4sTZ6jJDLl0d43nOXR2biP+YWwu6wVYFZLDmmF28bGDhH77c5b0i44SFr/AJyVHvjZZ3LyTL9Q4EY7HUQ1lxzi4TVp+h3xYm7wVLXAEEEEXBGcFZK4xHunrKOf63DJC83s1rY2u4S2ws13CNf5rpuQcuQ1MYkiddpzEaHNPA4aioVaMqfHhn5HYVIy4E0i8BXqqJhERAEREAREQBERAEREAREQBERAFYqZw0E8CrlfYKCmO/vLPuYzaTgkd7n7o18JzcIQFLGmoIe79he7GH73gc4e7wN16TqClKCRr8eH7uQxu6QAT+v5KHpsrujqHU1QzC0t3yCoH7KVl87Xj7D2nMdRFjmvYXJsUEznM9mUh5afZcSbHozkC+rE3TnVc6sYK74Lj6HUrkpUVeCWGLjd96sDQQqqyvZHgacRfI7DGxgu5x/QDnNgoitqQ+aKVp9VgZpzFvrXkB4CGkXXu+46qN4zhpsznaWvF/iJDfgsoOuk7eqXW379DuizY0UVlLKwYRHG3fJ3ENbGDYAnW932QBnOk21KRjBsMRBdbOQLAnXYaldciVP0HoK5IHrrb9B6CuX+b1ZxL/izvW3CNLSu8vyU1k3YxMaY1l+b1ZxL/izvTzerOJf8Wd616UM11RRovIxMaY1l+b1ZxL/izvTzerOJf8Wd6aUM11Q0XkYm+L0SLK83qziX/Fnenm9WcS/4s700oZrqhZ5Mwa2FkrDG/QdB1tOohatkrKc9DUHCc7SA9p9iVuq/VoOpbx5v1nEP+LO9Q+6PchWyBkkcEhkacJALLlp69R/VSjKm/wDCTVn6o41Lik7o6Zuby7FUxNljOY5nNPtMdraVOAri+5XJuVKSYSf2abe3WbKy8frN4R62kav/ACuuUFU17WuabhwuNX/xeZWpqnKyd0a6ctJb1ZmaiIqSYREQBERAEREAREQBERAF4V6rVQ+wQEXlapdmjYfrJDhadOH3nEcAGfpsNajarK0VG+KGVkohfGd7maDI0PafWbJbOHEEOBz39a9rZ8ugG+PfMdFzFH+60+setwPU1qxcqbqaCMmCYuc533Rhkc13W5uE/FRm7Rbvb1fD68PudSuy7NlOnqWHASS03a8BxAPPhu4A9GbTpAUeyX1Wku+rwyNAeQ1pBtjbf7t4w6PZNri2e1rf4HjFDCWjFnZMCRqzsDQ/BzWIHMlPC50j7PNgxjwwh1g+5DXYnglxs06QdDeALw8RiHL5ovdxjezWT4/vDfZrTCFv9lVOHvZd0Un1m/b5cNF8TQy9ib5wAetVU1Q9xD87H3d9XcCQWbh9Y/dtDSTfT6+bVeqi/tO9P3ywmu7ALscbXzZwAM+q4zHhWK+GbeWPldhlLmMkzNl9QuthOEDELkfE8JCzqdpbmr3tubfTt0RJrcSeTamOMGUh5c71WDA5gtfSLi3rHQBc24STeQydV1cjg/BC2AkixL99OfSCLgjqF1BxPGLFKHOaB9nfBIeEZ2gNac2ZpF9ZUxHuppQWxnfGHMGsMbj0AYLgL1sHV0kk2llFcf7d/wAWKKkbb+5PorcTw4BwvY5xcEH4FXF6BUEREAREQBERAFSQqkQGLKxRDTvMv4cxPQ2S1z1OAJ6QfeU68KOyjTB7HM0X0OGlrgbtcOcEA9SAkonXCrUXkaqL2AuFnZ2vb7rmkhw+IKlEAREQBERAEREAREQBERAFE5cnLWEN9t1mM/eeQ1p6ib9SlSVBVpxTxM1N3yU9QDR/vJ/hQGZRQBjWsb7LWho6ALBZjg2xxWw2ucVsNue6twhR2W9zsVVbfJKloGlsU0jI3jgfHcsd8E3+QNdqK+CR7mwsjjbizPYRTl9tbntz59TGguta5bey8ppXtkEmN8jHjAGAXJaDd0jb3cQDYZyb3NtIBzMs1MFII6SmZ/eJxobiMu9gm/rC7s+cC2gYiNABxayikjDWvIDpW+y22nExkYfbMGgvJwNzWYbl1yvBxdOpdylK+btaKu9yXm365Wbte61U2uC/2WZ4XSOMjJqcsJHrEMODD7wOdxBvrFubSr1ZO6UMbC/QcbZQAWTub9hlzY5rm99QsczrY7Yw0WjjFmCb+z3DRiBiaWEHgLibFXKKlF2Qssy78OE3wYcLiwG3sOa9u94hnBa298yyaE5NK2+9ldJfR+vDr9Sy6W8qhq2Ah5aH3FyyR5exw4cEpDmHoaR05rTuRt0FM94gYGslIOFgwhrrC5DbWvYZ84Cw8lVzoZhS1AsJXHey+1i/mOg4ub7WewLiG7JU0rH4cbWnA9r2E6WOacxB1f8AoXt4KnOMP5O3K1vT81e+/P67jNUab4fUvvNgTzFcmHlDrfwNg+JdZfoPQf0XzkHr3sBSjPS0le1vyYcRNxtZ5/g3X0h1v4GwfEnpDrfwNg+JaXjTGt+rUuVGbxZ5m6ekOt/A2D4k9Idb+BsHxLS8aY01alyoeLPM3T0h1v4GwfEnpDrfwNg+JaXjTGmrUuVDxZ5m6ekOt/A2D4lYrPKPWsY531FwM3qHTq+0tSxqLyvU3swas7unUuxwtJv+KOOtO3E2keVjKX/DdmfErrPKdXu0in7M+Jc/CyoCr3hKHIuhDx6nMzsXk93SSVEk7ZsGM4ZRgGEHMGuzX5mfErozDmXBNwtZvVVA7U929O6Hiw/mw/Bd3pnXC8LGUlTqtLg956FCblDeXkRFlLgiIgCIiAIiIAiIgKJTmUHBnnlPusiYOm7yf1apufQoTJv7SoP4zR/yIu9AS8QV8K1GryAjaHI8Ucks4GKeYgyTOzvIHssB+ywCwDRm1m5JJgN08rZK2lpG53vjkfMG5zHFiDQ51vZveSxOtq3FWY4GNLnNa0OeQXuAAc8gWBcdeawzqFSCqR0Xw3dnf8HU7bzWcux/36jaPvQLAaP7u4yO/IgKvdZkzDHLVREh8TTM5o+1hALi3gdZoOsEtbmuAVPz0THyRSn2ot8wfxtAP5BXpIw4FrgC1wLXA5wQRnBUHQhLSv8AM7/WyX4OqTViOko46unjbURgtkjjeWm7XMcWggtI9ZjgdBBBCkIWFrWtLi4gAYnWxOtrNs11dRXESl+g9B/RcAG5qv5LUdm/uX0Ci04fEujeyve3a/uVVaSqWu+B8++bdfyWo7N/cnm1X8lqOzf3L6CRaNoy5UV6rHNnz75tV/Jajs39yebVfyWo7N/cvoJE2jLlQ1WObPn3zar+S1HZv7k826/ktR2b+5fQSJtGXKhqsc2fPU257KAGakqSdX1b+5Rh3I5ROc0lVc/hP7l9MIpL4pNfKu5zVI5vsfM43IZR5JVdk/uV6LcllAf4Sp7N6+klQ9S2rPlXc5qcM32OA0mQK2MiQ084wEPuWOFsJv8A0XdqB92g8IurNW24I4QR+StbnnXhhJ0mKM/yBYsRiHXabSVsr/kupUlTTSfElkRFnLQiIgCIiAIiIAiIgLc+hQmTPbqP9Yf9CJTkozLnW6ndHNRzubG2MtkYyX6wOJvnabWcNTQrKVKVWShHiyE5qEdKXA6FEry42/yo1rdEVN1tl8asu8rdbxVLsy/MWzZmIyXUoWMpZvodqRcRPleruJpNmb5i89MFdxNJszfMXNm4jJdSWtU8+x29FxD0wV3FUezN8xPTBXcVSbM3zE2bXyXU7rNPPsdvRcQ9MFdxVJszfMT0wV3FUmzN8xNm18l1Gs08+x29FxD0wV3FUmzN8xPTBXcVSbM3zE2bXyXUazTz7Hb0XEPTBXcVSbM3zE9MFdxVJszfMTZtfJdRrNPPsdvRcQ9MFdxVJszfMT0wV3FUmzN8xNm18l1Gs08+x29FxD0wV3FUmzN8xPTBXcVSbM3zE2bXyXUazTz7Hb0XEPTBXcTSbM3zF6PK9XcTSbM3zE2bXyXU5rVPPsduVD1xZvlcruKpNmX5ivM8q1afuqbZl8a6vhmIfkupF4ykvN9Dq1Scx6CrG5wfUQ/6MX+wLm3pBq5AW73T3cC0WbJfOLe+up5Njwta33WgfALNXw86LSn5l1KrGorxM1ERUFgREQBERAEREAREQFLhmXNPKnSfsZed8R6wHN/Ry6atX3dZPMtNKALuYN9Zw3ZnsOkXHWrsPU8OrGWT/wC9iurDTpyjmjh1QxYEjVss2RKk5xDOQdFo3n+iwpNz1Zyeo7KXwr6yM4tcV1R4ehO/B9CBc1WyFNv3PVnJqnspfCrLtz1Zyap7KXwqLlDNdUWKMsn0IlUqUOQKzktT2UvhVP0BWcmquyl8KjpxzRPReRGopL6ArOTVXYy+FPoCs5NVdjL4VzxIZoaLyI1FJfQFZyaq7GXwp9AVnJqrsZfCniQzQ0XkRqKS+gKzk1V2MvhT6ArOTVXYy+FPEhmhovIjUUl9AVnJqrsZfCn0BWcmquxl8KeJDNDReRGopL6ArOTVXZS+FVDIFbyWp7KXwppxzQ0XkRwCqaFJDc/W8lqeyl8KuM3PVfJqnspfCpKUM11RFxlk+jI9jVlwMWYzc9WcnqOyl8Ky4chVQ0wVHZydynpwS/kuqKnCV+D6GbuXpN8qIGcMrXHoZ6x/Jq7pTNzLmfk5yQ8TSSyMe3e2BjQ9pacT85NjwAfzLqMYzL5v4hUU67t5K35/J62Dho0t/nvKkRFhNQREQBERAEREAREQBWKqO4V9eEICByS/DigOmEhreeM/sz8Lt6WFTMblD5VjMbmzi/qXEgGfFGdObWWmzuojWpCCQEAg5jnBGgoDNBXqoaVWgCIiAIiIAiIgCIiAIiIAiIgCIqXFAUucsKsnDWuc42a0FzjwAC5WRK9Q9Wd9kbCPZaWyS/G7GdZGI8zR7yAyciwusXvFnyOMjxrBOhvU0Nb/AAqYVqBlgrqAIiIAiIgCIiAIiIAiIgCIiAs1EdwtKy7leegwhkTHwOJDHOLgYzpwG2rTbmzalvajsq5PZMx0cjQWPFiO7gPOp05KMk5K6yIzTaaTs8znx8psw/w8W0/uVB8qsw/w8W2/uUNl7c++nkwOuWG+9yaMY4DwOGsdahJKJfRUcPgqkdKMFZ/37nj1K2Jg7OX29jcj5V5uTw7b+5UHytT8nh239y0h9G7pWO+EjSCtGz8K+EF1fuV65X85dkb6fK3PyeHbf3Kg+V2fk8O2/uWgFioLFzZ2G5F1fudWNq832Ohel6fk8O2/uXnpfn5NDtv7lz0sXmBc2dh+Rd/clrlXmOh+l+fk0O2/uT0vz8mh239y55va9DE2fh+Rd/ca5V5jofpen5PDtv7lUPK5PyeHbf3LnYYqgxNnYbkXV+5zXavN9joo8rU/J4dt/cqh5WZuTw7b+5c7ZHfQshlK46vipbOwq4wXV+5HXK3lL7G/DyrTcnh239yrHlQmP+Hi239y0aOiOtZlPQklrWtJc4hrWjOXE6gq54TBxV9BdX7ko4nESdtL7G60W7qpneyKOnjL3mw9Z9hwk5swGlbxkqjwNzm7iS57jpc46T3DUABqUJuQ3NinbifYzPAxuGho9xvNz6z1W2xrbL53ETpyn/5RtFf3v9fY9ejGaj/m7sqREVBaEREAREQBERAEREAREQBERAF4QvUQEblXJkczHRyNBa7VoI4CDqPOubZayBJTnPd0RPqygaOAPGo8+g82hdbWPPThwIIBBFiDnBV1GvOi7x6FVWlGorM44cmv9x+y5UHJknuP2Xdy6c6llh/ZHFHxTyc37jtX7puODCr9LlJrjhuWya43+q/qH2hzi451uXxSXL3MuoR5uxyZ+RnHTE7Yd3K0/c8T93IOgO/qF2xs6uCVTXxea+Xuc2fHPscJdubfqEnWwn+ioO5qXgfsOXexIvcaltifL+9Bs6Gf71OB+bMvA/s3Kpu5qTWH9THBd6xpjTbE+X96HNnQzOFN3OEaWSn+F3crjMhEfdP62uP6rt5kVDpVF/F5v5e7O7Pjn2OMtyW/3H7Lu5VjJj/cfsu7l1qprWsGJ7g1vC42HR0rBM80uaMFjOMkHrn9xh0dLvgVF/FJcvc7qEebsc4gya9zxG1jjI7Q21rDhJOgc633c1ubbB67rOmIzv1NHus4Bz6T+QmKHJzWX03cbuc4lz3HhJOlSDW2WSvi51tz3LI0UsPCnvXEMbZVIiyl4REQBERAEREAREQBERAEREAREQBERAEREBS5gKwqvJzHizmtIvexF7HhHAedZ6ICBdQTM/ZyG3uS3lHU64d8SV4KuZvtxOPPE5rx8HYT8AVPEKh0QQEMMrxfaLm/6jJIx8XABVtyxAdE0O2zvUkaYK26hadICAwjlaAaZYet7O9UHLEOqRruaO8h+DbrPGT2cA+AVwUgQEUcouPsRTO5yBEOvGQfgCvBHUP0lkY/yXkf1OcABslTTYAFWGhARdLkhjTjN3P995L39RPsjmFgpJkICuIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiID//Z"
+								alt=""
+								height="45px"
+								width="50px"
+							/>
+						</span>
+						
+					</li>
+
+					<li class="fas fa-user mr-2">
+						<span class="m-2"> <a href="index.html">Mi cuenta</a></span>
+					</li>
+					<li class="fas fa-shopping-cart mr-2">
+						<a href="index.html"><span class="m-2">Carrito </span></a>
+					</li>
+					<li class="fas fa-heart mr-2">
+						<a href="index.html"><span class="m-2">Favoritos</span> </a>
+					</li>
+					<!--<li class="fas fa-globe mr-2 m-2" id="google_translate_element"></li>-->
+				</ul>
+			</div>
+		</div>
+		<!--barra de navegacion-->
+		<div class="topnav" id="myTopnav">
+			<ul class="nav justify-content-center">
+				<li class="nav-item">
+					<a class="nav-link" href="index.html">Inicio</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Promociones</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="categorias.html">Productos</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Linea Diagnostico</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="postventa.html">Post Venta</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="nosotros.html">Quienes Somos?</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="trabajaconnosotros.html"
+						>Trabaja con Nosotros</a
+					>
+				</li>
+			</ul>
+		</div>
+
+		<!--Slideshow-->
+		<div class="slideshow-container">
+			<div class="mySlides">
+				<a href="productos.html"
+					><img src="source\banners\BANNERS WEB-02.jpg" class="img"
+				/></a>
+			</div>
+
+			<div class="mySlides">
+				<img src="source\banners\BANNERS WEB-03.jpg" class="img" />
+			</div>
+
+			<div class="mySlides">
+				<img src="source\banners\BANNERS WEB-04.jpg" class="img" />
+			</div>
+		</div>
+		<br />
+
+		<div style="text-align: center">
+			<span class="dot"></span>
+			<span class="dot"></span>
+			<span class="dot"></span>
+		</div>
+
+		<div class="flex-container" id="iconos">
+			<div id="entregas">
+				<i class="fas fa-shipping-fast m-3 p-2">
+					<span> ENTREGAS A TODO EL PAIS</span>
+				</i>
+				<br />
+				Llegamos a todos nuestros clientes a lo largo de todo el país, con los
+				mejores tiempos de entrega y un servicio diferencial.
+			</div>
+
+			<div id="seguridad">
+				<i class="fas fa-shield-alt m-3 p-2">
+					<span>SEGURIDAD PARA TUS PAGOS</span></i
+				><br />
+				Contamos con un amplio portfolio de productos de excelencia y un staff
+				técnico y profesional con amplia experiencia. Todos nuestros procesos
+				están certificados bajo Normas ISO.
+			</div>
+			<div id="atencion">
+				<i class="fas fa-headset m-3 p-2">
+					<span>ATENCIÓN PERSONALIZADA</span></i
+				><br />
+				Nuestra filosofía como empresa es brindar un permanente servicio para
+				satisfacer los requisitos de nuestros clientes, con un seguimiento
+				postventa y atención a todos los detalles.
+			</div>
+		</div>
+
+		<!--Cateogrias-->
+		<h3 class="categoriashome">Categorias Destacadas</h3>
+		<div class="row">
+			<div class="col-md-4">
+				<div class="card">
+					<a href="Covid19.html"
+						><img
+							src="source\fotosCategorias\covid\covid.jpg"
+							class="card-img-top"
+							alt="Covid-19"
+					/></a>
+					<span> Covid-19 </span>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="card">
+					<a href="consumibles.html"
+						><img
+							src="source\fotosCategorias\consumables.jpg"
+							class="card-img-top"
+							alt="Consumibles"
+					/></a>
+					<span> Consumibles </span>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="card">
+					<a href="#"
+						><img
+							src="source\fotosCategorias\cell-culture.jpg"
+							class="card-img-top"
+							alt="Cultivo Celular"
+					/></a>
+					<span> Cultivo Celular </span>
+				</div>
+			</div>
+		</div>
+
+		<!--instagram posts-->
+		<br />
+		<h3 class="posts">Instagram Post</h3>
+		<hr class="hr" />
+
+		<div class="instagramposts">
+			<div class="row">
+				<div class="col-md-4">
+					<iframe
+						src="https://www.instagram.com/p/CaAqMM1AMOq/embed"
+						width="320"
+						height="425"
+						frameborder="0"
+						scrolling="no"
+						allowtransparency="true"
+					></iframe>
+				</div>
+				<div class="col-md-4">
+					<iframe
+						src="https://www.instagram.com/p/CZ2fwWoA9TL/embed"
+						width="320"
+						height="425"
+						frameborder="0"
+						scrolling="no"
+						allowtransparency="true"
+					></iframe>
+				</div>
+				<div class="col-md-4">
+					<iframe
+						src="https://www.instagram.com/p/CZuwma0tURH/embed"
+						width="320"
+						height="425"
+						frameborder="0"
+						scrolling="no"
+						allowtransparency="true"
+					></iframe>
+				</div>
+			</div>
+		</div>
+		<hr class="hr" />
+
+		<!---Nuestras Redes 
+
+    <h3 class="nuestrasredes">Nuestras Redes</h3>
+
+    <div class="row redes">
+      <div class="col-md-4">
+        <a
+          href="https://es-la.facebook.com/pages/category/Biotechnology-Company/AP-biotech-327643623927337/"
+          target="_blank"
+          ><i class="fab fa-facebook"></i>Facebook</a
+        >
+      </div>
+      <div class="col-md-4">
+        <a href="https://www.linkedin.com/company/ap-biotech" target="_blank"
+          ><i class="fab fa-linkedin"></i>Linkedin
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="https://www.instagram.com/apbiotech/?hl=es" target="_blank"
+          ><i class="fab fa-instagram"></i> Instagram</a
+        >
+      </div>
+    </div>-->
+
+		<div class="btnWhatsApp">
+			<div class="btn_popup" id="botonWhatsApp" target="_blank" role="button">
+				<div class="wa__btn_popup_txt"></div>
+				<div class="wa__btn_popup_icon"></div>
+			</div>
+			<div
+				id="cajadecontactoWhatsApp"
+				class="wa__popup_chat_box wa__pending wa__active wa__lauch"
+				style="display: none"
+			>
+				<div class="wa__popup_heading">
+					<div class="wa__popup_title"></div>
+					<div class="wa__popup_intro">
+						¿Tenés una duda? Chateá con el Equipo de AP-Biotech por WhatsApp!
+					</div>
+				</div>
+				<div class="wa__popup_content">
+					<div class="wa__popup_notice">
+						Normalmente contestamos al instante. Horario de Atención: Lun-Vie de
+						08:30-17:30Hs.
+					</div>
+					<div class="wa__popup_content_list">
+						<div class="wa__popup_content_item">
+							<a
+								target="_blank"
+								href="https://api.whatsapp.com/send?phone=541139446974&amp;text=Hola! necesitaria resolver una consulta"
+								class="wa__stt wa__stt_online"
+							>
+								<div class="wa__popup_avatar">
+									<div class="wa__cs_img_wrap"></div>
+								</div>
+								<div class="wa__popup_txt">
+									<div class="wa__member_name">AP-Biotech</div>
+									<div class="wa__member_duty"></div>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<br />
+
+		<footer class="footer">
+			<div class="flex-container">
+				<div class="flex-item-left">
+					<h3>ENLACES</h3>
+					<ul class="footer links">
+						<li class="nav item"><a href="#"> Política de Privacidad</a></li>
+						<li class="nav item"><a href="#"> Términos de Busqueda </a></li>
+						<li class="nav item"><a href="#">Contáctenos</a></li>
+						<li class="nav item"><a href="#"> Ordenes y devoluciones </a></li>
+						<li class="nav item"><a href="#"> Busqueda Avanzada</a></li>
+						<li class="nav item">
+							<a href="#"> Solicitud de Servicio Técnico</a>
+						</li>
+					</ul>
+				</div>
+				<!--Mi cuenta-->
+				<div class="flex-item-center">
+					<h3>MI CUENTA</h3>
+					<ul class="footer links">
+						<li class="nav item"><a href="#"> Mi cuenta</a></li>
+						<li class="nav item"><a href="#"> Ingresar </a></li>
+						<li class="nav item"><a href="#"> Mi carrito </a></li>
+						<li class="nav item"><a href="#"> Mis comparaciones </a></li>
+						<li class="nav item"><a href="#"> Favoritos</a></li>
+					</ul>
+				</div>
+				<!--Contactenos-->
+				<div class="flex-item-right">
+					<h3>CONTÁCTENOS</h3>
+					<ul class="footer links">
+						<li class="nav item">
+							Dirección: Félix de Azara 757 (B1832BTO) Lomas de Zamora Buenos
+							Aires
+						</li>
+						<li class="nav item">Correo electrónico: info@apbiotech.com.ar</li>
+						<li class="nav item">Teléfono: +54 11 5352-3820</li>
+					</ul>
+				</div>
+			</div>
+		</footer>
+	</body>
+
+	<script
+		type="text/javascript"
+		src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+	></script>
+
+	<script src="main.js"></script>
+</html>
